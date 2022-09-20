@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "commonjs",
+		"rootDir": "./typescript",
+		"outDir": "./javascript",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"noImplicitAny": false,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strictNullChecks": false,
+		"watch": true
+	}
+}
