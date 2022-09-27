@@ -7,6 +7,8 @@
  * 链接：https://leetcode.cn/problems/missing-two-lcci
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
+// 方法1:求和
 function missingTwo(nums: number[]): number[] {
     if (!nums || nums.length == 0) {
         return [1, 2];
@@ -27,6 +29,44 @@ function missingTwo(nums: number[]): number[] {
 
     return [rangeSum, sum2 - rangeSum];
 };
+
+// 方法2:异或
+function missingTwoXOR(nums: number[]): number[] {
+    if (!nums || nums.length == 0) {
+        return [1, 2];
+    }
+
+    // 二次异或得到要求的2个数的异或值结果
+    let xor = 0;
+    for (let num of nums) {
+        xor ^= num;
+    }
+    for (let i = 1; i <= nums.length + 2; i++) {
+        xor ^= i;
+    }
+
+    // 异或相反数得到lowbit(最低位是1的值)
+    // 由2个数异或结果可知,最低位为1说明其中1个数该位是0,另1个数该位是1
+    // 分两类再次异或计算,可分别得出2个数
+    let lowbit = xor & -xor;
+    let one = 0;
+    let two = 0;
+    for (let num of nums) {
+        if (num & lowbit) {
+            one ^= num;
+        } else {
+            two ^= num;
+        }
+    }
+    for (let i = 1; i <= nums.length + 2; i++) {
+        if (i & lowbit) {
+            one ^= i;
+        } else {
+            two ^= i;
+        }
+    }
+    return [one, two];
+}
 
 // 修改数组前2个值返回
 function missingTwoBySort(nums: number[]): number[] {
@@ -60,3 +100,4 @@ function missingTwoBySort(nums: number[]): number[] {
 };
 
 console.log(missingTwo([1, 2, 3, 4, 5, 7, 8, 9]))
+console.log(missingTwoXOR([1, 2, 3, 4, 5, 7, 8, 9]))
