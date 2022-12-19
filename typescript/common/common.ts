@@ -10,3 +10,31 @@ export class ListNode {
         this.next = n;
     }
 }
+
+/**
+ * 并查集
+ */
+export class UnionFindSet {
+    private set: number[] = null;
+
+    // 构造函数
+    constructor(n: number) {
+        this.set = new Array(n);
+        for (let i = 0; i < n; i++) {
+            this.set[i] = i;
+        }
+    }
+
+    // 查找
+    public Find(index: number): number {
+        if (this.set[index] == index) {
+            return index;
+        }
+        return this.set[index] = this.Find(this.set[index]);
+    }
+
+    // 合并
+    public Merge(left: number, right: number) {
+        this.set[this.Find(right)] = this.Find(left);
+    }
+}
