@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UnionFindSet = exports.ListNode = void 0;
+exports.isDigit = exports.UnionFindSet = exports.ListNode = void 0;
 /**
  * 链表节点
  */
@@ -38,4 +38,13 @@ class UnionFindSet {
     }
 }
 exports.UnionFindSet = UnionFindSet;
+/**
+ * 是否数字字符串
+ * @param s 字符串
+ * @returns 是否数字字符串
+ */
+function isDigit(s) {
+    return s >= "0" && s <= "9";
+}
+exports.isDigit = isDigit;
 //# sourceMappingURL=common.js.map

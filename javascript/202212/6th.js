@@ -10,12 +10,14 @@
  * 链接：https://leetcode.cn/problems/number-of-different-integers-in-a-string/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+const common_1 = require("../common/common");
 // 方法1:
 function numDifferentIntegers(word) {
     let map = new Map();
     let temp = "";
     for (let i = 0; i < word.length; i++) {
-        if (!isDigit(word[i])) {
+        if (!(0, common_1.isDigit)(word[i])) {
             if (temp.length != 0 && !map.has(parseInt(temp))) {
                 map.set(parseInt(temp), 1);
             }
@@ -38,14 +40,14 @@ function numDifferentIntegers2(word) {
     let p1 = 0;
     let p2 = 0;
     while (p1 < n) {
-        while (p1 < n && !isDigit(word[p1])) {
+        while (p1 < n && !(0, common_1.isDigit)(word[p1])) {
             p1++;
         }
         if (p1 == n) {
             break;
         }
         p2 = p1;
-        while (p2 < n && isDigit(word[p2])) {
+        while (p2 < n && (0, common_1.isDigit)(word[p2])) {
             p2++;
         }
         while (p2 - p1 > 1 && word[p1] == "0") {
@@ -55,9 +57,6 @@ function numDifferentIntegers2(word) {
         p1 = p2;
     }
     return set.size;
-}
-function isDigit(s) {
-    return s >= "0" && s <= "9";
 }
 console.log(numDifferentIntegers2("u"));
 //# sourceMappingURL=6th.js.map

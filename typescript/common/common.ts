@@ -38,3 +38,12 @@ export class UnionFindSet {
         this.set[this.Find(right)] = this.Find(left);
     }
 }
+
+/**
+ * 是否数字字符串
+ * @param s 字符串
+ * @returns 是否数字字符串
+ */
+export function isDigit(s: string) {
+    return s >= "0" && s <= "9";
+}

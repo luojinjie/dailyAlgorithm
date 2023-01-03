@@ -10,6 +10,8 @@
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
+import { isDigit } from "../common/common";
+
 // 方法1:
 function numDifferentIntegers(word: string): number {
     let map = new Map();
@@ -58,10 +60,6 @@ function numDifferentIntegers2(word: string): number {
     }
 
     return set.size;
-}
-
-function isDigit(s: string) {
-    return s >= "0" && s <= "9";
 }
 
 console.log(numDifferentIntegers2("u"))
