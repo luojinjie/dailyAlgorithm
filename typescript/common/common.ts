@@ -47,3 +47,23 @@ export class UnionFindSet {
 export function isDigit(s: string) {
     return s >= "0" && s <= "9";
 }
+
+/**
+ * 最大公约数
+ * @param a 数值1
+ * @param b 数值2
+ * @returns 最大公约数
+ */
+export function gcd(a: number, b: number) {
+    return b == 0 ? a : gcd(b, a % b);
+}
+
+/**
+ * 最小公倍数
+ * @param a 数值1
+ * @param b 数值2
+ * @returns 最小公倍数
+ */
+export function lcm(a: number, b: number) {
+    return a * b / gcd(a, b);
+}

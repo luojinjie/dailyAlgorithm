@@ -1,5 +1,3 @@
-import { UnionFindSet } from "../common/common";
-
 /**
  * 1697. 检查边长度限制的路径是否存在
  * 给你一个 n 个点组成的无向图边集 edgeList ，其中 edgeList[i] = [ui, vi, disi] 表示点 ui 和点 vi 之间有一条长度为 disi 的边。请注意，两个点之间可能有 超过一条边 。
@@ -10,6 +8,9 @@ import { UnionFindSet } from "../common/common";
  * 链接：https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
+import { UnionFindSet } from "../common/common";
+
 function distanceLimitedPathsExist(n: number, edgeList: number[][], queries: number[][]): boolean[] {
     // 边长从小到大排序
     edgeList.sort((a: number[], b: number[]) => a[2] - b[2]);

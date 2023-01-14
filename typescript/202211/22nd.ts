@@ -7,6 +7,9 @@
  * 链接：https://leetcode.cn/problems/nth-magical-number/solutions/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
+import { lcm } from "../common/common";
+
 function nthMagicalNumber(n: number, a: number, b: number): number {
     let mod = 1e9 + 7;
     let left = Math.min(a, b); // 左边界
@@ -29,15 +32,5 @@ function nthMagicalNumber(n: number, a: number, b: number): number {
 
     return (right + 1) % mod;
 };
-
-// 最大公约数
-function gcd(a: number, b: number) {
-    return b == 0 ? a : gcd(b, a % b);
-}
-
-// 最小公倍数
-function lcm(a: number, b: number) {
-    return a * b / gcd(a, b);
-}
 
 console.log(nthMagicalNumber(4, 2, 3))
