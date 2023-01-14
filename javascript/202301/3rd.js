@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const common_1 = require("../common/common");
 /**
  * 2042. 检查句子中的数字是否递增
  * 句子是由若干 token 组成的一个列表，token 间用 单个 空格分隔，句子没有前导或尾随空格。每个 token 要么是一个由数字 0-9 组成的不含前导零的 正整数 ，要么是一个由小写英文字母组成的 单词 。
@@ -12,6 +11,7 @@ const common_1 = require("../common/common");
  * 链接：https://leetcode.cn/problems/check-if-numbers-are-ascending-in-a-sentence/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+const common_1 = require("../common/common");
 function areNumbersAscending(s) {
     let zero = "0".charCodeAt(0);
     let prev = 0;

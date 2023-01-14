@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isDigit = exports.UnionFindSet = exports.ListNode = void 0;
+exports.lcm = exports.gcd = exports.isDigit = exports.UnionFindSet = exports.ListNode = void 0;
 /**
  * 链表节点
  */
@@ -47,4 +47,24 @@ function isDigit(s) {
     return s >= "0" && s <= "9";
 }
 exports.isDigit = isDigit;
+/**
+ * 最大公约数
+ * @param a 数值1
+ * @param b 数值2
+ * @returns 最大公约数
+ */
+function gcd(a, b) {
+    return b == 0 ? a : gcd(b, a % b);
+}
+exports.gcd = gcd;
+/**
+ * 最小公倍数
+ * @param a 数值1
+ * @param b 数值2
+ * @returns 最小公倍数
+ */
+function lcm(a, b) {
+    return a * b / gcd(a, b);
+}
+exports.lcm = lcm;
 //# sourceMappingURL=common.js.map

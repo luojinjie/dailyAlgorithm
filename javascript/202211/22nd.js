@@ -8,11 +8,13 @@
  * 链接：https://leetcode.cn/problems/nth-magical-number/solutions/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+const common_1 = require("../common/common");
 function nthMagicalNumber(n, a, b) {
     let mod = 1e9 + 7;
     let left = Math.min(a, b); // 左边界
     let right = left * n; // 右边界
-    let c = lcm(a, b); // 最小公倍数
+    let c = (0, common_1.lcm)(a, b); // 最小公倍数
     while (left <= right) {
         let middle = left + Math.floor((right - left) / 2);
         // 小于等于middle的神奇数字个数
@@ -30,13 +32,5 @@ function nthMagicalNumber(n, a, b) {
     return (right + 1) % mod;
 }
 ;
-// 最大公约数
-function gcd(a, b) {
-    return b == 0 ? a : gcd(b, a % b);
-}
-// 最小公倍数
-function lcm(a, b) {
-    return a * b / gcd(a, b);
-}
 console.log(nthMagicalNumber(4, 2, 3));
 //# sourceMappingURL=22nd.js.map
