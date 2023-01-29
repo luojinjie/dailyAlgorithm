@@ -11,7 +11,7 @@
  * int calculateMKAverage() 对当前的数据流计算并返回 MK 平均数 ，结果需 向下取整到最近的整数 。
  * 
  * 来源：力扣（LeetCode）
- * 链接：https://leetcode.cn/problems/count-nice-pairs-in-an-array/
+ * 链接：https://leetcode.cn/problems/finding-mk-average/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 class MKAverage {
