@@ -23,7 +23,7 @@ class TreeNode {
         this.right = null;
         this.val = v;
         this.left = l;
-        this.left = r;
+        this.right = r;
     }
 }
 exports.TreeNode = TreeNode;

@@ -22,7 +22,7 @@ export class TreeNode {
     constructor(v?: number, l?: TreeNode, r?: TreeNode) {
         this.val = v;
         this.left = l;
-        this.left = r;
+        this.right = r;
     }
 }
 
