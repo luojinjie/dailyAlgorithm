@@ -12,6 +12,21 @@ export class ListNode {
 }
 
 /**
+ * 二叉树节点
+ */
+export class TreeNode {
+    public val: number = null;
+    public left: TreeNode = null;
+    public right: TreeNode = null;
+
+    constructor(v?: number, l?: TreeNode, r?: TreeNode) {
+        this.val = v;
+        this.left = l;
+        this.left = r;
+    }
+}
+
+/**
  * 并查集
  */
 export class UnionFindSet {

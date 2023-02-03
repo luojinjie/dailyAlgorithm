@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.lcm = exports.gcd = exports.isDigit = exports.UnionFindSet = exports.ListNode = void 0;
+exports.lcm = exports.gcd = exports.isDigit = exports.UnionFindSet = exports.TreeNode = exports.ListNode = void 0;
 /**
  * 链表节点
  */
@@ -13,6 +13,20 @@ class ListNode {
     }
 }
 exports.ListNode = ListNode;
+/**
+ * 二叉树节点
+ */
+class TreeNode {
+    constructor(v, l, r) {
+        this.val = null;
+        this.left = null;
+        this.right = null;
+        this.val = v;
+        this.left = l;
+        this.left = r;
+    }
+}
+exports.TreeNode = TreeNode;
 /**
  * 并查集
  */
