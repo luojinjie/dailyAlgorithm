@@ -9,7 +9,7 @@
  * 如果一个验证码在时刻 t 过期，且另一个操作恰好在时刻 t 发生（renew 或者 countUnexpiredTokens 操作），过期事件 优先于 其他操作。
  * 
  * 来源：力扣（LeetCode）
- * 链接：https://leetcode.cn/problems/remove-sub-folders-from-the-filesystem/
+ * 链接：https://leetcode.cn/problems/design-authentication-manager/
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
