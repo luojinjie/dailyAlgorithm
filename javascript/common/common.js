@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.lcm = exports.gcd = exports.isDigit = exports.UnionFindSet = exports.TreeNode = exports.ListNode = void 0;
+exports.lcm = exports.gcd = exports.isLetter = exports.isDigit = exports.UnionFindSet = exports.TreeNode = exports.ListNode = void 0;
 /**
  * 链表节点
  */
@@ -61,6 +61,15 @@ function isDigit(s) {
     return s >= "0" && s <= "9";
 }
 exports.isDigit = isDigit;
+/**
+ * 是否字母字符串
+ * @param s 字符串
+ * @returns 是否字母字符串
+ */
+function isLetter(s) {
+    return (s >= "a" && s <= "z") || (s >= "A" && s <= "Z");
+}
+exports.isLetter = isLetter;
 /**
  * 最大公约数
  * @param a 数值1

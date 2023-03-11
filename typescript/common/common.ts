@@ -64,6 +64,15 @@ export function isDigit(s: string) {
 }
 
 /**
+ * 是否字母字符串
+ * @param s 字符串
+ * @returns 是否字母字符串
+ */
+export function isLetter(s: string) {
+    return (s >= "a" && s <= "z") || (s >= "A" && s <= "Z");
+}
+
+/**
  * 最大公约数
  * @param a 数值1
  * @param b 数值2
