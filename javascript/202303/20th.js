@@ -36,4 +36,4 @@ function numDupDigitsAtMostN(n) {
 }
 ;
 console.log(numDupDigitsAtMostN(20));
-//# sourceMappingURL=18th.js.map
+//# sourceMappingURL=20th.js.map
