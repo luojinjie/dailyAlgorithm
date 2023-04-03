@@ -25,6 +25,10 @@
  * "+**-***-***-XXXX" 如果国家代码为 2 位数字
  * "+***-***-***-XXXX" 如果国家代码为 3 位数字
  * "XXXX" 是最后 4 位 本地号码
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode.cn/problems/masking-personal-information/
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("../common/common");
